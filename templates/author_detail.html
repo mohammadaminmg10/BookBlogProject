@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{% block title %} {{ author.name }} {% endblock title %}</h1>
+        <img src="{{ author.author_image.url }}" class="img-responsive" style="width: 300px" />
+        <h3 class="card-text ">{{ author.content | safe }}</h3>
+      </div>
+    </div>
+    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+  </div>
+</div>
+{% endblock content %}

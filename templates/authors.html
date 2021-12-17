@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="masthead">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class=" col-md-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h3 class=" site-heading my-4 mt-3 text-black">DJANGO BOOK BLOG</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8 mt-3 left">
+      {% for author in author_list %}
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">{{ author.name }}</h2>
+          <img src="{{ author.author_image.url }}" class="img-responsive" style="width: 150px" />
+          <p class="card-text">{{author.content|slice:":400"}}</p>
+          <a href="/authors/{{ author.slug }}" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% block sidebar %}
+    {% include 'sidebar.html' %}
+    {% endblock sidebar %}
+  </div>
+</div>
+{%endblock%}

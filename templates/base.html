@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book Blog App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap cdn -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/journal/bootstrap.min.css"> -->
+{#  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css">#}
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">BOOK BLOG</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/authors">Authors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/accounts/login">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  {% block content %}
+  <!-- Content Goes here -->
+  {% endblock content %}
+  <!-- Footer -->
+  <footer class="py-3 bg-grey">
+    <p class="m-0 text-dark text-center ">Copyright &copy; 2021 MohammadAmin Ghorbannezhad</p>
+  </footer>
+</body>
+
+</html>
